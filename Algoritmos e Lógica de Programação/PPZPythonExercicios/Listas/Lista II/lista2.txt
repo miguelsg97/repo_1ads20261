@@ -1,0 +1,141 @@
+Nome: Miguel Silva Gomes
+ 
+Turma: 1º sem. ADS
+ 
+Lista de Exercícios II Python para Zumbis
+
+Lista de Exercícios
+ 
+1) Faça um Programa que peça os três lados de um triângulo. O programa deverá informar se os valores podem ser
+um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+ 
+print('Cálculo de Triângulos')
+print()
+valor = float(input('Primeiro valor: '))
+valor2 = float(input('Segundo valor: '))
+valor3 = float(input('Terceiro valor: '))
+print()
+if valor + valor2 > valor3 and valor + valor3 > valor2 and valor2 + valor3 > valor:
+    if valor == valor2 and valor2 == valor3:
+        print('O triângulo é equilátero.')
+    elif valor == valor2 or valor == valor3 or valor2 == valor3:
+        print('O triângulo é isósceles.')
+    else:
+        print('O triângulo é escaleno.')
+else:
+    print('Não forma um triângulo.')
+ 
+2) Determine se um ano é bissexto. Verifique no Google como fazer isso...
+ 
+print('Cálculo de Ano Bissexto')
+print()
+ano = int(input('Insira o ano: '))
+print()
+if ano < 0:
+    print('O valor inserido é inválido.')
+elif (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print('O ano é bissexto.')
+else:
+    print('O ano NÃO é bissexto.')
+ 
+3) João Papo de Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e verifique se há excesso. Se houver, gravar na variável excesso e na variável multa o valor da multa que João deverá pagar. Caso contrário mostrar tais variáveis com o conteúdo ZERO.
+ 
+print('Cálculo de Multa para Pescadores')
+print()
+kgPeixe = float(input('Informe o peso pescado: '))
+print()
+if kgPeixe > 50:
+    excessoPeixe = kgPeixe - 50
+    valorMulta = excessoPeixe * 4
+else:
+    excessoPeixe = 0
+    valorMulta = 0
+print(f'Excesso: {excessoPeixe:.2f} kg')
+print(f'O valor da multa é de: R${valorMulta:.2f}')
+ 
+4) Faça um Programa que leia três números e mostre o maior deles.
+ 
+print('Descubra o maior número')
+print()
+n = float(input('Digite o primeiro número: '))
+n2= float(input('Digite o segundo número: '))
+n3 = float(input('Digite o terceiro número: '))
+print()
+if n >= n2 and n >= n3:
+    print(n, 'é o maior número.')
+elif n2 >= n and n2 >= n3:
+    print(n2, 'é o maior número.')
+else:
+    print(n3, 'é o maior número.')
+ 
+5) Faça um Programa que leia três números e mostre o maior e o menor deles.
+ 
+print('Descubra o maior e o menor número')
+print()
+n = float(input('Insira o 1º valor: '))
+n2 = float(input('Insira o 2º valor: '))
+n3 = float(input('Insira o 3º valor: '))
+print()
+if n >= n2 and n >= n3:
+    maior = n
+elif n2 >= n and n2 >= n3:
+    maior = n2
+else:
+    maior = n3
+if n <= n2 and n <= n3:
+    menor = n
+elif n2 <= n and n2 <= n3:
+    menor = n2
+else:
+    menor = n3
+print(f'O menor valor é', menor)
+print(f'O maior valor é', maior)
+ 
+6) Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê o salário bruto, quanto pagou ao INSS, quanto pagou ao sindicato e o salário líquido. Observe que Salário Bruto - Descontos = Salário Líquido. Calcule os descontos e o salário líquido, conforme a tabela abaixo:
+a. + Salário Bruto: R$
+b. IR (11%): R$
+C. - INSS (8%): R$
+d. - Sindicato (5%): R$
+e. = Salário Liquido: R$
+
+print('Cálculo de salário e descontos')
+print()
+print('Insira valores a seguir: ')
+print()
+valorHora = float(input('Valor recebido por hora: '))
+horas = int(input('Horas trabalhadas (mês): '))
+if valorHora < 0 or horas < 0:
+    print('Os valores não podem ser negativos. Tente novamente.')
+else:
+    salarioBruto = valorHora * horas
+    impostoRenda = salarioBruto * 0.11
+    inss = salarioBruto * 0.08
+    sindicato = salarioBruto * 0.05
+    descontosTotais = impostoRenda + inss + sindicato
+    salarioLiquido = salarioBruto - descontosTotais
+    print()
+    print(f'Salário bruto: R${salarioBruto:.2f}')
+    print(f'Desconto Imposto de Renda: R${impostoRenda:.2f}')
+    print(f'Desconto INSS: R${inss:.2f}')
+    print(f'Desconto sindicato: R${sindicato:.2f}')
+    print(f'Descontos totais: R${descontosTotais:.2f}')
+    print(f'Salário líquido: R${salarioLiquido:.2f}')
+
+7) Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total. Obs.: somente são vendidos um número inteiro de latas.
+
+print('Cálculo para pintura')
+print()
+print('Responda a seguir')
+print()
+area = float(input('Área a ser pintada (m²): '))
+print()
+if area <= 0:
+    print('A área não pode ser negativa. Tente novamente.')
+else:
+    cobertura = area / 3
+    qtdLatas = cobertura / 18
+    qtdLatasFinal = -(-qtdLatas // 1)
+    valorFinal = qtdLatasFinal * 80
+    print('Quantidade de latas a serem compradas: ', qtdLatasFinal)
+    print()
+    print(f'Valor final: R${valorFinal:.2f}')

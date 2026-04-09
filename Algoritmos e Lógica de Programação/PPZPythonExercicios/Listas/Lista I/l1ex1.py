@@ -1,0 +1,7 @@
+print('Soma de valores')
+print('Insira os valores a serem somados')
+print()
+valor = int(input('Primeiro valor: '))
+valor2 = int(input('Segundo valor: '))
+print()
+print('Resultado da soma:', valor + valor2)

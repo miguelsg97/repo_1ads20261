@@ -1,0 +1,10 @@
+print('Cálculo de duração de viagens')
+print('Insira valores a seguir.')
+print()
+distanciaPercorrer = float(input('Distância a percorrer (km): '))
+velocidadeMedia = float(input('Velocidade média (km/h): '))
+duracaoViagemHoras = distanciaPercorrer / velocidadeMedia
+horas = int(duracaoViagemHoras)
+minutos = round((duracaoViagemHoras - horas) * 60)
+print()
+print(f'A duração da viagem será de: {horas}h {minutos}min')

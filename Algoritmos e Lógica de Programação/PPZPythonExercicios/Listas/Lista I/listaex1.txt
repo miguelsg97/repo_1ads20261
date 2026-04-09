@@ -1,0 +1,135 @@
+Nome: Miguel Silva Gomes
+Turma: 1º sem. ADS
+
+Lista de Exercícios 1
+
+1) Faça um programa que peça dois números inteiros e imprima a soma desses dois números
+
+print('Soma de valores')
+print('Insira os valores a serem somados')
+print()
+valor = int(input('Primeiro valor: '))
+valor2 = int(input('Segundo valor: '))
+print()
+print('Resultado da soma:', valor + valor2)
+
+2) Escreva um programa que leia um valor em metros e o exiba convertido em milímetros
+
+print('Conversão de metros para milímetros')
+print('Insira um valor em metros a seguir')
+print()
+valorM = float(input('Valor (m): '))
+valorMM = valorM * 1000
+print()
+print(f'Valor convertido (mm): {valorMM:.2f}')
+
+3) Escreva um programa que leia a quantidade de dias, horas, minutos e segundos do usuário. Calcule o
+total em segundos.
+
+print('Exibição de horas e conversão para segundos')
+print('Atribua os valores desejados a seguir.')
+print()
+dias = int(input('Dias: '))
+horas = int(input('Horas: '))
+minutos = int(input('Minutos: '))
+segundos = int(input('Segundos: '))
+segundosTotal = ((dias * 86400) + (horas * 3600) + (minutos * 60) + segundos)
+print()
+print('Total de segundos:', segundosTotal)
+
+4) Faça um programa que calcule o aumento de um salário. Ele deve solicitar o valor do salário e a
+porcentagem do aumento. Exiba o valor do aumento e do novo salário.
+
+print('Cálculo de aumento de salário')
+print('Insira as informações requisitadas a seguir.')
+print()
+salarioBase = float(input('Salário base: '))
+porcentagemAumento = float(input('Porcentagem do aumento: '))
+valorAumento = salarioBase * porcentagemAumento / 100
+salarioNovo = salarioBase + valorAumento
+print()
+print(f'Valor do aumento: R${valorAumento:.2f}')
+print(f'Novo salário: R${salarioNovo:.2f}')
+
+5) Solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço
+a pagar
+
+print('Cálculo de preços de mercadorias e descontos')
+print('Digite valores a seguir.')
+print()
+valorMercadoria = float(input('Valor da mercadoria: '))
+percentualDesconto = float(input('Percentual do desconto: '))
+valorDesconto = valorMercadoria * percentualDesconto / 100
+valorFinalMercadoria = valorMercadoria - valorDesconto
+print()
+print(f'Valor do desconto: R${valorDesconto:.2f}')
+print(f'Valor final da mercadoria:  R${valorFinalMercadoria:.2f}')
+
+6) Calcule o tempo de uma viagem de carro. Pergunte a distância a percorrer e a velocidade média
+esperada para a viagem.
+
+print('Cálculo de duração de viagens')
+print('Insira valores a seguir.')
+print()
+distanciaPercorrer = float(input('Distância a percorrer (km): '))
+velocidadeMedia = float(input('Velocidade média (km/h): '))
+duracaoViagemHoras = distanciaPercorrer / velocidadeMedia
+horas = int(duracaoViagemHoras)
+minutos = round((duracaoViagemHoras - horas) * 60)
+print()
+print(f'A duração da viagem será de: {horas}h {minutos}min')
+
+7 e 8) Converta uma temperatura digitada em Celsius para Fahrenheit. F = 9*C/5 + 32 8) Faça agora o
+contrário, de Fahrenheit para Celsius.
+
+print('Conversão de Celsius e Fahrenheit')
+print()
+celsius = float(input('Insira uma temperatura em Celsius: '))
+celsiusConvertido = (9 * celsius / 5) + 32
+print()
+print(f'Temperatura inserida (C) em Fahrenheit (F): {celsiusConvertido:.2f}')
+
+print('Conversão de Fahrenheit para Celsius')
+print()
+fahrenheit = float(input('Insira uma temperatura em Fahrenheit (F): '))
+fahrenheitConvertido = (fahrenheit - 32) * 5 / 9
+print()
+print(f'Temperatura inserida (F) em Celsius (C): {fahrenheitConvertido:.2f}')
+
+9) Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado pelo
+usuário, assim como a quantidade de dias pelos quais o carro foi alugado. Calcule o preço a pagar,
+sabendo que o carro custa R$ 60,00 por dia e R$ 0,15 por km rodado.
+
+print('Aluguel de carros')
+print('Digite valores a seguir.')
+print()
+kmPercorridos = float(input('Quantidade de quilômetros percorridos: '))
+diasAlugado = int(input('Quantidade de dias alugado: '))
+precoAPagar = (60 * diasAlugado) + (0.15 * kmPercorridos)
+print()
+print('Valor diário: R$60,00')
+print('Valor por quilômetro rodado: R$0,15')
+print(f'Preço a pagar: R${precoAPagar:.2f}')
+
+10) Escreva um programa para calcular a redução do tempo de vida de um fumante. Pergunte a
+quantidade de cigarros fumados por dia e quantos anos ele já fumou. Considere que um fumante
+perde 10 minutos de vida a cada cigarro, calcule quantos dias de vida um fumante perderá. Exiba o
+total de dias.
+
+print('Cálculo da redução do tempo de vida de um fumante')
+print('Informe valores a seguir.')
+print()
+qtdCigarros = int(input('Quantidade de cigarros fumados diariamente: '))
+anosFumando = float(input('Quantidade de anos fumando: '))
+diasPerdidos = ((10 * qtdCigarros) * 365 * anosFumando) / 1440
+diasPerdidos = round(diasPerdidos)
+print()
+print('Dias de vida perdidos em decorrência do cigarro: ', diasPerdidos)
+
+11) Sabendo que str( ) converte valores numéricos para string, calcule quantos dígitos há em 2 elevado a
+dez mil.
+
+print(f'Quantidade de dígitos em 2 elevado a 10.000')
+valor = 2 ** 10000
+qtdDigitos = len(str(valor))
+print('2 elevado a 10.000 tem', qtdDigitos, 'dígitos.')

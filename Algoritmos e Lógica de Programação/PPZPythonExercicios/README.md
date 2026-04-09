@@ -1,0 +1,1 @@
+Exercícios disponibilizados pelo professor Fernando Masanori em https://bit.ly/PPZPythonExercicios para o curso de ADS da FATEC São José dos Campos - Prof. Jessen Vidal e do curso Python para Zumbis disponível no YouTube.

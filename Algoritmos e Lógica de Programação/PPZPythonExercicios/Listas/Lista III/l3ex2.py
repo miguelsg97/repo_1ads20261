@@ -1,0 +1,13 @@
+print('Cadastre-se')
+print()
+print('Preencha com as informações desejadas.')
+print()
+username = input('Nome de usuário: ')
+senha = input('Senha: ')
+print()
+while senha == username:
+    print('O nome de usuário e a senha não podem ser iguais. Insira uma nova senha.')
+    print()
+    senha = input('Senha: ')
+print()
+print('Usuário cadastrado!')

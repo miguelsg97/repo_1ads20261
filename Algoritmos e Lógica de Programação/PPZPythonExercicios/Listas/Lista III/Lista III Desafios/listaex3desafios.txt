@@ -1,0 +1,98 @@
+Nome: Miguel Silva Gomes
+
+Turma: 1º sem. ADS
+
+Lista de Exercícios IIIb - Desafios! - Python para Zumbis
+
+1) Dizemos que um número natural é triangular se ele é produto de três números naturais consecutivos. Exemplo: 120 é triangular, pois 4.5.6 = 120. Dado um inteiro não negativo n, verificar se n é triangular.
+
+print('Definição de números triangulares')
+print()
+n = int(input('Insira um número: '))
+m1 = 0
+m2 = 1
+m3 = 2
+ac = 0
+print()
+while ac < n:
+    m1 += 1
+    m2 += 1
+    m3 += 1
+    ac = m1 * m2 * m3
+if ac == n:
+    print(f'O número inserido É triangular ({m1} * {m2} * {m3} = {ac}).')
+else:
+    print('O número inserido NÃO é triangular.')
+
+2) Indique como um troco deve ser dado utilizando-se um número mínimo de notas. Seu algoritmo deve ler o valor da conta a ser paga e o valor do pagamento efetuado desprezando os centavos. Suponha que as notas para troco sejam as de 50, 20, 10, 5, 2 e 1 reais, e que nenhuma delas esteja em falta no caixa.
+
+print('Cálculo de troco')
+print()
+valorConta = int(input('Insira o valor da conta a ser paga: '))
+valorPagamento = int(input('Insira o valor do pagamento efetuado: '))
+print()
+valorTroco = valorPagamento - valorConta
+notas = [50, 20, 10, 5, 2, 1]
+if valorPagamento > valorConta:
+    for nota in notas:
+        qtdNotas = valorTroco // nota
+        if qtdNotas > 0:
+            print(f'Devolva {qtdNotas} nota(s) de R${nota}.')
+            valorTroco %= nota
+elif valorConta == valorPagamento:
+    print('Não há troco a ser devolvido.')
+else:
+    valorDevendo = valorConta - valorPagamento
+    print(f'O pagador ainda deve R${valorDevendo}.')
+
+3) Verifique se um inteiro positivo n é primo.
+
+print('Cálculo de números primos')
+print()
+n = int(input('Insira um número: '))
+print()
+if n == 1:
+    print('O número inserido NÃO é primo.')
+elif n <= 0:
+    print('O número inserido não é um inteiro positivo, logo, NÃO é primo.')
+else:
+    ct = 1
+    ac = 0
+    while ct <= n:
+        if n % ct == 0:
+            ac += 1
+        ct += 1
+    if ac == 2:
+        print('O número inserido É primo.')
+    else:
+        print('O número inserido NÃO é primo.')
+
+4) Dado um número inteiro positivo, determine a sua decomposição em fatores primos calculando também a multiplicidade de cada fator.
+
+print('Decomposição em fatores primos e multiplicidade de fatores')
+print()
+n = int(input('Insira um valor: '))
+print()
+print('Fatores e multiplicidades:')
+ct = 2
+while n > 1:
+    ac = 0
+    while n % ct == 0:
+        n //= ct
+        ac += 1
+    if ac > 0:
+        print(ct, ac)
+    ct += 1
+
+5) Faça um programa que peça um inteiro positivo e o mostre invertido. Ex.: 1234 gera 4321
+
+print('Inversão de números')
+print()
+n = int(input('Insira um número: '))
+inversao = 0
+print()
+while n > 0:
+    ud = n % 10
+    inversao = inversao * 10 + ud
+    n //= 10
+print(f'Número invertido: {inversao}')

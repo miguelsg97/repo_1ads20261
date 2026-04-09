@@ -1,0 +1,10 @@
+print('Valor entre zero e dez')
+print()
+valor = float(input('Insira um valor entre zero e dez: '))
+print()
+while valor > 10 or valor < 0:
+    print('O valor inserido é inválido. Tente novamente.')
+    print()
+    valor = float(input('Insira um valor entre zero e dez: '))
+print()
+print(f'O valor inserido foi {valor} e está entre zero e dez.')

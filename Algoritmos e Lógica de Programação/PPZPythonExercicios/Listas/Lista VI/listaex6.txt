@@ -1,6 +1,3 @@
-Nome: Miguel Silva Gomes
-Turma: 1º sem. ADS
-
 Lista 06 CodingBat - Python Para Zumbis
 
 #!/usr/bin/python -tt

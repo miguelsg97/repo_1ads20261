@@ -1,6 +1,3 @@
-Nome: Miguel Silva Gomes
-Turma: 1º sem. ADS
-
 Lista de Exercícios V - Prova para poder participar do Google Developer Day 2010 - Python para Zumbis
 
 Questão A. O que o seguinte programa (dado na forma de pseucódigo) imprime?
